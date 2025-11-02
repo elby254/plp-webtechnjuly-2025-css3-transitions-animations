@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Part 1: CSS Transitions ===== */
+.fancy-btn {
+  background: royalblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fancy-btn:hover {
+  background: dodgerblue;
+  transform: scale(1.1);
+}
+
+/* Continuous animation using keyframes */
+.fade-box {
+  width: 80px;
+  height: 80px;
+  background: coral;
+  margin: 20px auto;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* ===== Part 3: Animated Box ===== */
+#animatedBox {
+  width: 100px;
+  height: 100px;
+  background: mediumseagreen;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+#animatedBox.animate {
+  transform: translateY(-50px) rotate(45deg);
+  opacity: 0.5;
+}
